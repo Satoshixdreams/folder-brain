@@ -44,6 +44,23 @@ Every topic is one folder with its own `INDEX.md`, `memory/` (short summaries) a
 5. Optional: `python3 tools/check.py` in a weekly job — it reports leaked secrets, booby-trapped memories,
    bad file names, index drift and any change to the rule files. Exit code 1 = something to look at.
 
+### Installing the server as a package (optional)
+
+```bash
+pip install folder-brain        # or: uvx folder-brain-mcp
+folder-brain-mcp                # speaks MCP on stdio
+```
+
+When it runs from a package, the folder is found through `BRAIN_DIR` — set it to your Brain path in the
+MCP config, otherwise it falls back to the parent of the installed file:
+
+```json
+{ "mcpServers": { "brain": {
+  "command": "folder-brain-mcp",
+  "env": { "BRAIN_DIR": "/Users/you/brain" }
+} } }
+```
+
 ## What it is not
 
 - **Not automatic memory.** Nothing is recalled unless the assistant's instructions tell it to read `core.md`

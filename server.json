@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Satoshixdreams/folder-brain",
+  "title": "Folder Brain",
+  "description": "A memory folder your AI assistants actually read: core rules, per-topic memory and verbatim conversation archives, solved-problem cards. Local markdown, no database, no cloud.",
+  "repository": {
+    "url": "https://github.com/Satoshixdreams/folder-brain",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "folder-brain",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

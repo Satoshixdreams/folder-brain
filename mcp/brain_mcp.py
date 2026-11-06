@@ -20,7 +20,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from guard import DATA_BANNER, SECRET, TRAP_WARNING, find_secret, find_trap, one_line, scrub  # noqa: E402,F401
 
-BRAIN = Path(__file__).resolve().parent.parent
+BRAIN = Path(os.environ.get("BRAIN_DIR") or Path(__file__).resolve().parent.parent).expanduser()
 MAX_LINES = 200
 SECTION = {"memory": "memory", "conversation": "conversations", "solved-problem": "cards"}
 # only the owner changes these (by hand); assistants may read them

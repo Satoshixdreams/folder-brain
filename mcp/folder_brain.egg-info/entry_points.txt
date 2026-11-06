@@ -1,0 +1,2 @@
+[console_scripts]
+folder-brain-mcp = brain_mcp:main
