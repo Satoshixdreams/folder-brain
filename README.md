@@ -24,6 +24,18 @@ Every topic is one folder with its own `INDEX.md`, `memory/` (short summaries) a
 
 ## Setup (10 minutes)
 
+### Easiest: double-click the installer (macOS)
+
+1. Download or `git clone` this repo.
+2. Double-click **`install.command`** in the repo folder. It checks Python, copies the Brain to the folder you
+   choose (default `~/brain`), runs the health check, and offers to register the MCP server in Claude Desktop
+   (it backs up the existing config first). Nothing is uploaded and nothing is paid.
+3. Open `core.md` and replace the `<...>` placeholders. Done.
+
+If macOS refuses to run it ("unidentified developer"): right-click → Open → Open.
+
+### Or by hand
+
 1. `git clone <this repo> ~/brain && cd ~/brain && git init` (or just copy the folder).
 2. Open `core.md`, replace every `<...>` with your own facts. That single file is what makes the Brain yours.
 3. Register the MCP server with your assistant:
