@@ -84,6 +84,21 @@ MCP config, otherwise it falls back to the parent of the installed file:
   today's truth. That is why the upgrade rule and the weekly check exist — they need a human or a scheduled job.
 - **Not tested on Windows.** Tested on macOS with Python 3.9+; Linux should work (all `pathlib`, no shell tricks) but is unverified.
 
+## What makes it different: it knows when it is wrong
+
+Two things almost no other memory system does, and both are possible **because** the Brain is plain files:
+
+- **Contradictions are refused, not merged.** Save a memory that says `Akku Samsung = 50 €` while an existing
+  memory says `60 €` and the server stops, names the old file and line, and asks for one of two decisions:
+  fix the old memory (`brain_upgrade`), or pass `supersedes=[<old file>]` — the old file is then kept as
+  history with a "superseded by" note and the new one becomes the truth. Same for opposite rules
+  (`verboten` vs `erlaubt`, `nie` vs `immer`).
+- **Old knowledge is marked as old.** A memory nobody touched for 30 days shows up in search as
+  `⏳ STALE (47d old — verify before relying on it)`. Stale memory is worse than none: it reads exactly like
+  today's truth.
+
+Every other system writes over silently and then contradicts itself. This one refuses.
+
 ## The four rules that make it work
 
 1. **Read before answering.** `core.md` + `INDEX.md` + the topic index. A memory nobody reads is worthless.

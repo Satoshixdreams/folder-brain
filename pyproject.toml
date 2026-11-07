@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "folder-brain"
-version = "0.1.0"
+version = "0.2.0"
 description = "A memory folder your AI assistants actually read — MCP server for the Folder Brain template"
 readme = "README.md"
 requires-python = ">=3.9"
