@@ -9,7 +9,7 @@ from pathlib import Path
 BRAIN = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BRAIN / "mcp"))
 from guard import SECRET, find_trap  # noqa: E402
-SKIP_DIRS = {".git", "templates", "mcp", "tools"}
+SKIP_DIRS = {".git", "templates", "mcp", "tools", "skill"}
 ROOT_FILES = {"INDEX.md", "AGENTS.md", "CLAUDE.md", "core.md", "README.md", "LICENSE", "SHARED-STATE.md"}
 MAX_LINES = 200
 
