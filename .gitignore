@@ -7,3 +7,4 @@ customer-chats/
 build/
 dist/
 *.egg-info/
+*.egg-info/
